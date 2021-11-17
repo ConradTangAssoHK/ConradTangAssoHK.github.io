@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.menu, .leftMenu {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+/* Navbar styling */
+.menu li {
+	display: block;
+	height: 20px;
+	float: left;
+	line-height: 20px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #FFF;
+}
+.menu a {
+	text-decoration: none;
+	display: block;
+	color: #000;
+}
+	.menu li a:hover {
+		color: #DCD210;
+	}
+
+.menu li.mIndex { width: 199px; border-right: 1px solid; }
+.menu li.mHistory { width: 199px; border-right: 1px solid; }
+.menu li.mCadastral { width: 199px; border-right: 1px solid; }
+.menu li.mDownloads { width: 199px; border-right: 1px solid; }
+.menu li.mInformation { width: 199px; }
+
+/*
+.menu li.mIndex { width: 166px; border-right: 1px solid; }
+.menu li.mHistory { width: 166px; border-right: 1px solid; }
+.menu li.mCadastral { width: 166px; border-right: 1px solid; }
+.menu li.mDownloads { width: 166px; border-right: 1px solid; }
+.menu li.mInformation { width: 166px; border-right: 1px solid; }
+.menu li.mLinks { width: 165px; }
+*/
+
+.leftMenu li {
+	width: 165px;
+	height: 35px auto;
+	line-height: 35px;
+	text-align: left;
+	border-top: 1px solid #BDBDBD;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	text-indent: 8px;
+}
+.leftMenu li.mLeft { margin-top: 30px; border-bottom: 1px solid #BDBDBD; }
+.leftMenu li.mLeft1 { margin-top: 30px; }
+.leftMenu li.mLeft2 { border-bottom: 1px solid #BDBDBD; }
+.leftMenu a {
+	text-decoration: none;
+	display: block;
+	color: #E9A811;
+}
+	.leftMenu li a:hover {
+		color: red;
+	}

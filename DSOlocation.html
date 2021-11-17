@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Hong Kong Cadastral Survey System</title>
+
+<link rel="shortcut icon" href="image/logo-title-lsgi.gif" />
+<link rel="stylesheet" type="text/css" href="styleDiv.css" />
+<link rel="stylesheet" type="text/css" href="styleContent.css" />
+<link rel="stylesheet" type="text/css" href="navbar.css"  />
+<link rel="stylesheet" type="text/css" href="googleMapsAPI.css" />
+<script type="text/javascript" src="toggleDiv.js"></script>
+
+<!-- Google map syntax -->
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+function init() {
+	var mapDiv = document.getElementById("mymap");
+	var mapOptions = {
+		center: new google.maps.LatLng (22.394278, 114.124368),
+		zoom: 11,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(mapDiv, mapOptions);
+
+// Javascript Object Notation (json) technique for storing spatial data
+var json = [
+	{"title": "Map Publications Centre, Hong Kong",
+		"lat": 22.2923099,
+		"lng": 114.2084302,
+		"description": "23/F, North Point Government Offices, 333 Java Road, North Point, Hong Kong" },
+	{"title": "District Survey Office, Hong Kong",
+		"lat": 22.2770704,
+		"lng": 114.1728492,
+		"description": "18/F, Southorn Centre, 130-150 Hennessy Road, Wan Chai, Hong Kong" },
+	{"title": "District Survey Office, Islands",
+		"lat": 22.2865954,
+		"lng": 114.1549994,
+		"description": "18/F, Harbour Building, 38 Pier Road, Central, Hong Kong" },
+	{"title": "Map Publications Centre, Kowloon",
+		"lat": 22.308289,
+		"lng": 114.1716646,
+		"description": "382 Nathan Road, Yau Ma Tei, Kowloon" },
+	{"title": "District Survey Office, Kowloon",
+		"lat": 22.3096185,
+		"lng": 114.1701354,
+		"description": "10/F, Yau Ma Tei Carpark Building, 250 Shanghai Street, Kowloon" },
+	{"title": "District Survey Office, North",
+		"lat": 22.4945935,
+		"lng": 114.13833,
+		"description": "5/F, North District Government Offices, 3 Pik Fung Road, Fanling, N.T." },
+	{"title": "District Survey Office, Sai Kung",
+		"lat": 22.3820297,
+		"lng": 114.2724416,
+		"description": "3/F, Sai Kung Government Offices, 34 Chan Man Street, Sai Kung, N.T." },
+	{"title": "District Survey Office, Sha Tin",
+		"lat": 22.3856935,
+		"lng": 114.1869396,
+		"description": "12/F, Sha Tin Government Offices, 1 Sheung Wo Che Road, Sha Tin, N.T." },
+	{"title": "District Survey Office, Tai Po",
+		"lat": 22.450653,
+		"lng": 114.1645105,
+		"description": "5/F, Tai Po Government Offices, 1 Ting Kok Road, Tai Po, N.T." },
+	{"title": "District Survey Office, Tsuen Wan & Kwai Tsing",
+		"lat": 22.374268,
+		"lng": 114.11558,
+		"description": "15/F, Tsuen Wan Government Offices, 38 Sai Lau Kok Road, Tsuen Wan, N.T." },
+	{"title": "District Survey Office, Tuen Mun",
+		"lat": 22.3904101,
+		"lng": 113.9763308,
+		"description": "5/F, Tuen Mun Government Offices, 1 Tuen Hi Road, Tuen Mun, N.T." },
+	{"title": "District Survey Office, Yuen Long",
+		"lat": 22.4453655,
+		"lng": 114.0272094,
+		"description": "8/F, Yuen Long Government Offices, 2 Kiu Lok Square, Yuen Long, N.T." }
+]
+	
+for (var i=0, length=json.length; i<length; i++){
+	var data = json[i],
+		latLng = new google.maps.LatLng(data.lat, data.lng);
+	// Creating the marker and put it on the map
+	var marker = new google.maps.Marker({
+		position: latLng,
+		map: map,
+		title: data.title
+	})
+	// Adding infowindows
+	var infoWindow = new google.maps.InfoWindow();
+	
+	// Attaching a click event to the current marker
+		google.maps.event.addListener(marker, "click", function(e) {
+		infoWindow.setContent(data.description);
+		infoWindow.open(map, marker);
+		});
+	
+	// Creating a closure to retain the correct data 
+	//Note how I pass the current data in the loop into the closure (marker, data)
+	(function(marker, data) {
+		// Attaching a click event to the current marker
+		google.maps.event.addListener(marker, "click", function(e) {
+		infoWindow.setContent(data.description);
+		infoWindow.open(map, marker);
+		});
+		})(marker, data);
+}
+}
+window.onload = init;
+</script>
+<!-- END Google map syntax -->
+
+</head>
+
+<body>
+<!-- Header div -->
+<div id="containerHeader">
+<div id="header">
+	<div id="logoPolyU">
+    	<a href="http://www.polyu.edu.hk/web/en/home/index.html" target="_blank"><img src="image/logo-polyu.gif" /></a>
+    </div>
+    <div id="logoLSGI">
+    	<a href="http://www.lsgi.polyu.edu.hk/home/index.asp" target="_blank"><img src="image/logo-lsgi.gif" /></a>
+    </div>
+    <div id="sitemap">
+    	<a class="header" href="sitemap.html"><p class="header">Sitemap</p></a>
+    </div>
+    <div id="myPolyu">
+    	<a class="header" href="https://portal.polyu.edu.hk/login/" target="_blank"><p class="header">myPolyU</p></a>
+    </div>
+    <div id="logofb">
+    	<a href="https://www.facebook.com/LSGI.PolyU" target="_blank"><img src="image/logo-fb.gif" /></a>
+    </div>
+</div>
+<div id="navbar">
+	<nav>
+    <ul class="menu">
+    	<li class="mIndex"><a href="index.html">Home</a></li>
+        <li class="mHistory"><a href="history.html">History</a></li>
+        <li class="mCadastral"><a href="cadastre.html">Boundaries</a></li>
+        <li class="mDownloads"><a href="resource.html">Resources</a></li>
+        <li class="mInformation"><a href="links.html"><font style="color:#D2773F;text-decoration:underline;">Information</font></a></li>
+    </ul>
+    </nav>
+</div>
+</div>
+
+<!-- containerContent -->
+<div id="containerContent">
+
+<!-- leftPanel -->
+<div id="leftPanel">
+	<nav>
+    <ul class="leftMenu">
+    	<li class="mLeft1"><a href="links.html">Links</a></li>
+        <li><a href="DSOlocation.html">DSO Locations</a></li>
+        <li><a href="ordinance.html">Relevance Ordinances</a></li>
+        <li><a href="institutions.html">Survey Institutions</a></li>
+    </ul>
+    </nav>
+</div>
+<!-- leftPanel -->
+
+<!-- contentPanel -->
+<div id="contentPanel">
+	<br />
+    <p class="titleFont"><i>District Survey Offices</i></p>
+    <br />
+    
+	<p class="paragraph1">Various maps and land records can be purchased in District Survey Offices, users can also order map products online.<br><br>Further details about Map Sales Locations: <a href="http://www.landsd.gov.hk/mapping/en/pro&ser/outlet.htm" target="_blank">Click Here</a></p><br />
+	
+    <!-- GOOGLE MAP ON DSO LOCATION -->
+	<div id="mymap"></div>
+	<!-- GOOGLE MAP ON DSO LOCATION -->
+    
+    <br />
+    
+    
+    
+    
+    
+    
+    
+	<br />
+    <br />
+</div>
+<!-- contentPanel -->
+
+</div>
+<!-- containerContent -->
+
+
+
+<!-- Bottom div -->
+<div id="containerBottom">
+<div id="leftBottom">
+	<p class="copyright">Copyrights © 2015. Department of Land Surveying and Geo-Informatics, The Hong Kong Polytechnic University All Rights Reserved.</p>
+</div>
+<div id="rightBottom">
+	<p class="footer" style="text-align: right; margin-right: 25px;">[<a class="footer" href="about.html">About Us</a>]</p>
+</div>
+</div>
+</body>
+</html>

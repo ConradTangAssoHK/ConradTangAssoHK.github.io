@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Hong Kong Cadastral Survey System</title>
+
+<link rel="shortcut icon" href="image/logo-title-lsgi.gif" />
+<link rel="stylesheet" type="text/css" href="styleDiv.css" />
+<link rel="stylesheet" type="text/css" href="styleContent.css" />
+<link rel="stylesheet" type="text/css" href="navbar.css"  />
+<script type="text/javascript" src="toggleDiv.js"></script>
+</head>
+
+<body>
+<!-- Header div -->
+<div id="containerHeader">
+<div id="header">
+	<div id="logoPolyU">
+    	<a href="http://www.polyu.edu.hk/web/en/home/index.html" target="_blank"><img src="image/logo-polyu.gif" /></a>
+    </div>
+    <div id="logoLSGI">
+    	<a href="http://www.lsgi.polyu.edu.hk/home/index.asp" target="_blank"><img src="image/logo-lsgi.gif" /></a>
+    </div>
+    <div id="sitemap">
+    	<a class="header" href="sitemap.html"><p class="header">Sitemap</p></a>
+    </div>
+    <div id="myPolyu">
+    	<a class="header" href="https://portal.polyu.edu.hk/login/" target="_blank"><p class="header">myPolyU</p></a>
+    </div>
+    <div id="logofb">
+    	<a href="https://www.facebook.com/LSGI.PolyU" target="_blank"><img src="image/logo-fb.gif" /></a>
+    </div>
+</div>
+<div id="navbar">
+	<nav>
+    <ul class="menu">
+    	<li class="mIndex"><a href="index.html">Home</a></li>
+        <li class="mHistory"><a href="history.html">History</a></li>
+        <li class="mCadastral"><a href="cadastre.html"><font style="color:#D2773F;text-decoration:underline;">Boundaries</font></a></li>
+        <li class="mDownloads"><a href="resource.html">Resources</a></li>
+        <li class="mInformation"><a href="links.html">Information</a></li>
+    </ul>
+    </nav>
+</div>
+</div>
+
+<!-- containerContent -->
+<div id="containerContent">
+
+<!-- leftPanel -->
+<div id="leftPanel">
+	<nav>
+    <ul class="leftMenu">
+    	<li class="mLeft1"><a href="cadastre.html">Cadastre</a></li>
+        <li class="mLeft2"><a href="procedures.html">Survey Procedures</a></li>
+        <br />
+        <li class="mLeft1"><a href="geodetic.html">Geodetic Datum</a></li>
+        <li><a href="aerialPhotography.html">Aerial Photography</a></li>
+        <li><a href="units.html">Surveying Units</a></li>
+        <li><a href="mapIndexing.html">Maps Indexing</a></li>
+    </ul>
+    </nav>
+</div>
+<!-- leftPanel -->
+
+<!-- contentPanel -->
+<div id="contentPanel">
+	<br />
+	<p class="titleFont" style="font-style: italic;">Hong Kong Map Indexing</p>
+    <br />
+    
+    <p class="paragraph1" style="font-size:11px;">Note: Below introduces the basic indexing system of paper maps in Hong Kong.</p>
+	<p class="paragraph1">Link to Hong Kong Maps indexing calculator: <a href="mapIndexCal.html">Click here</a></p>
+    <br />
+    
+    <p class="paragraph1">Paper maps covering Hong Kong are indexed by a 4 field system depending on their scale:</p>
+	<ul class="content">
+		<li>1:20,000 topographic maps - 16 sheets</li>
+		<li style="list-style:none;"><i>(HM20C color series, and HM20C/2 black and white series)</i></li>
+		<li>1:10,000 derived plans - 59 sheets (as at June 2014)</li>
+		<li style="list-style:none;"><i>(SM10C series generalized from HP1C maps)</i></li>
+		<li>1:5,000 derived plans - 167 sheets (as at February 2015)</li>
+		<li style="list-style:none;"><i>(HP5C series generalized from HP1C maps)</i></li>
+		<li>1:1,000 basic plans - 3266 sheets (as at October 2014)</li>
+		<li style="list-style:none;"><i>(HP1C maps)</i></li>
+	</ul>
+    
+    <p class="subtitle">Deriving grids</p>
+	<ul class="content">
+		<li>HM20C 1:20,000 topographics maps</li>
+		<li style="list-style:none;">printed on sheets with size 685 &#215; 980 mm, presenting area of 12,000 &#215; 15,000 m</li>
+		<li>SM10C 1:10,000 derived maps</li>
+		<li style="list-style:none;">printed on sheets with size 685 &#215; 980 mm, presenting area of 6,000 &#215; 7,500 m</li>
+		<li>HP5C 1:5,000 derived maps</li>
+		<li style="list-style:none;">printed on sheets with size 750 &#215; 850 mm, presenting area of 1,200 &#215; 1,500 m</li>
+		<li>HP1C 1:1,000 basic plans</li>
+		<li style="list-style:none;">printed on sheets with size 750 &#215; 850 mm, presenting area of 600 &#215; 750 m</li>
+	</ul>
+<img class="contentLeft" src="image/mapIndexing/GridSetting.jpg" width="748px" style="border:1px solid #000; margin-bottom:0px;" />
+	<figcaption>Figure 1 - Map grid settings 1</figcaption>
+    <br />
+<img class="contentLeft" src="image/mapIndexing/GridSetting2.jpg" width="500px" style="border:1px solid #000; margin-bottom:0px;" />
+	<figcaption>Figure 2 - Map grid settings 2</figcaption>
+    <br />
+    
+    <hr class="secDivider" />
+    <p class="subtitle">Example - Retriving map grid index with coordinates</p>
+	<dl class="content">
+		<dd>Northing : 832,900m</dd>
+		<dd>Easting : 824,700m</dd>
+		<br />
+		<dd>First, we ignore the HK80 prefixes, i.e.</dd>
+		<dd>N 832,900 - 800,000 = 32,900m</dd>
+		<dd>E 824,900 - 800,000 = 24,900m</dd>
+		<br />
+		<dd>At HM20C level,</li>
+		<dd>N 32,900 / 12,000 = 2.742 &#8594; 3</dd>
+		<dd>E 24,900 / 15,000 = 1.660 &#8594; 2</dd>
+		<dd>Grid(3,2) &#8594; 6 (Figure 3)</dd>
+		<br />
+		<img src="image/mapIndexing/GridMatrix.jpg" width="450px" style="border:1px solid #000;margin-bottom:0px;" />
+		<figcaption style="margin-left:0px;">Figure 3 - Corresponding grid indexing</figcaption>
+		<br>
+		<dd style="list-style:none;">Then we retrieve the lower left corner (LLC) coordinates of grid 6, i.e.</li>
+		<dd>(LLC) N 824,000 &#8594; 24,000</dd>
+		<dd>(LLC) E 815,000 &#8594; 15,000</dd>
+		<br>
+		<dd>And minus (N 32,900, E 24,700) by the LLC coordinates</dd>
+		<dd>N 32,900 - 24,000 = 8,900m</dd>
+		<dd>E 24,700 - 15,000 = 9,700m</dd>
+		<br>
+		<dd>At SM10C level,</dd>
+		<dd>N 8,900 / 6,000 = 1.4833 &#8594; 2</dd>
+		<dd>E 9,700 / 7,500 = 1.2933 &#8594; 2</dd>
+		<dd>Grid(2,2) &#8594; NE</dd>
+		<dd>i.e. 6-NE</dd>
+		<br>
+		<dd>LLC coordinates of grid 6-NE, i.e.</dd>
+		<dd>N 830,000 &#8594; 30,000m</dd>
+		<dd>E 822,500 &#8594; 22,500m</dd>
+		<br>
+		<dd>Minus</dd>
+		<dd>N 32,900 - 30,000 = 2,900m</dd>
+		<dd>E 24,700 - 22,500 = 2,200m</dd>
+		<br>
+		<dd>AT HP5C level,</dd>
+		<dd>N 2,900 / 1,200 = 2.416 &#8594; 3</dd>
+		<dd>E 2,200 / 1,500 = 1.467 &#8594; 2</dd>
+		<dd>Grid(3,2) &#8594; 12</dd>
+		<dd>i.e. 6-NE-12</dd>
+		<br>
+		<dd>LLC coordinates of grid 6-NE-12, i.e.</dd>
+		<dd>N 832,400 &#8594; 32,400m</dd>
+		<dd>E 824,000 &#8594; 24,000m</dd>
+		<br>
+		<dd>Minus</dd>
+		<dd>N 32,900 - 32,400 = 500m</dd>
+		<dd>E 24,700 - 24,000 = 700m</dd>
+		<br>
+		<dd>At HP1C level,</dd>
+		<dd>N 500 / 600 = 0.833 &#8594; 1</dd>
+		<dd>E 700 / 750 = 0.933 &#8594; 1</dd>
+		<dd>Grid(1,1) &#8594; C</dd>
+		<dd>i.e. 6-NE-12C</dd>
+		<br>
+		<a href="image/mapIndexing/6-NE-12C_crop.jpg" target="_blank"><img src="image/mapIndexing/6-NE-12C_crop.jpg" width="350px" style="border:1px solid #000;margin-bottom:0px;" /></a>
+		<figcaption style="margin-left:0px;">Figure 4 - Map grid 6-NE-12C</figcaption>
+		<br>
+		<dd>The upper left corner coordinates of grid 6-NE-12C is (833,000mN,824,000mE), referring to the coordinates used in this example (832,900mN, 824,700mE), this point is within the grid.</dd>
+	</dl>
+    <br />
+    
+    
+    
+    
+    
+    
+    
+	<br />
+    <p class="paragraph1">Reference/ Bibliography: </p>
+    <br />
+</div>
+<!-- contentPanel -->
+
+</div>
+<!-- containerContent -->
+
+
+
+<!-- Bottom div -->
+<div id="containerBottom">
+<div id="leftBottom">
+	<p class="copyright">Copyrights © 2015. Department of Land Surveying and Geo-Informatics, The Hong Kong Polytechnic University All Rights Reserved.</p>
+</div>
+<div id="rightBottom">
+	<p class="footer" style="text-align: right; margin-right: 25px;">[<a class="footer" href="about.html">About Us</a>]</p>
+</div>
+</div>
+</body>
+</html>
